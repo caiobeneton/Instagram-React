@@ -114,13 +114,13 @@ body {
   margin-right: 10px;
 }
 
-.story .imagem {
+.imagem {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 66px;
   width: 66px;
-  background-image: url('../assets/img/story-circle.svg');
+  background-image: url('./story-circle.svg');
   
 }
 
@@ -138,7 +138,7 @@ body {
   height: 14px;
 }
 
-.stories .setinha {
+.stories>.setinha {
   position: absolute;
   right: 10px;
   top: 45px;
