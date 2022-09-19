@@ -161,6 +161,10 @@ b {
   margin-top: 18px;
 }
 
+.heart {
+  color: red;
+}
+
 .post .topo {
   display: flex;
   justify-content: space-between;

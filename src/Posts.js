@@ -11,6 +11,7 @@ function Post(props) {
     const [salvar, setSalvar] = react.useState('bookmark-outline')
     const [curtida, setCurtida] = react.useState('heart-outline')
     const [total, setTotal] = react.useState(props.numCurtidas)
+    const [red, setRed] = react.useState('')
 
     function salvarIcone(){
         if (salvar === 'bookmark-outline') {
@@ -23,9 +24,11 @@ function Post(props) {
         if (curtida === 'heart-outline') {
             setCurtida('heart')
             setTotal(total + 1)
+            setRed('heart')
         } else {
             setCurtida('heart-outline')
             setTotal(total - 1)
+            setRed('')
         }
     }
 
@@ -48,7 +51,7 @@ function Post(props) {
             <div class="fundo">
                 <div class="acoes">
                     <div>
-                        <ion-icon onClick={curtir} name={curtida}></ion-icon>
+                        <ion-icon class={red} onClick={curtir} name={curtida}></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
