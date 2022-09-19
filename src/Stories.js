@@ -7,80 +7,60 @@ import responde from './img/respondeai.svg'
 import filo from './img/filomoderna.svg'
 import gourmet from './img/memeriagourmet.svg'
 
+function Story(props) {
+    return (
+        <div class="story">
+            <div className="imagem">
+                <img src={props.imagem} />
+            </div>
+            <div class="usuario">
+                {props.user}
+            </div>
+        </div>
+    )
+}
+
 export default function Stories() {
+    
+    let storyContent = [
+        {
+            imagem: gag,
+            user: '9gag'
+        },
+        {
+            imagem: meow,
+            user: 'meowed'
+        },
+        {
+            imagem: barked,
+            user: 'barked'
+        },
+        {
+            imagem: planet,
+            user: 'nathanwpylestrangeplanet'
+        },
+        {
+            imagem: wawa,
+            user: 'wawawicomics'
+        },
+        {
+            imagem: responde,
+            user: 'respondeai'
+        },
+        {
+            imagem: filo,
+            user: 'filomoderna'
+        },
+        {
+            imagem: gourmet,
+            user: 'memeriagourmet'
+        }
+    ]
+
     return (
         <div class="stories">
-            <div class="story">
-                <div className="imagem">
-                    <img src={gag} />
-                </div>
-                <div class="usuario">
-                    9gag
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                    <img src={meow} />
-                </div>
-                <div class="usuario">
-                    meowed
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                    <img src={barked} />
-                </div>
-                <div class="usuario">
-                    barked
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                    <img src={planet} />
-                </div>
-                <div class="usuario">
-                    nathanwpylestrangeplanet
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                    <img src={wawa} />
-                </div>
-                <div class="usuario">
-                    wawawicomics
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                    <img src={responde} />
-                </div>
-                <div class="usuario">
-                    respondeai
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                    <img src={filo} />
-                </div>
-                <div class="usuario">
-                    filomoderna
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                    <img src={gourmet} />
-                </div>
-                <div class="usuario">
-                    memeriagourmet
-                </div>
-            </div>
+            
+            {storyContent.map((s) => <Story imagem={s.imagem} user={s.user}></Story>)}
 
             <div class="setinha">
                 <ion-icon name="chevron-forward-circle"></ion-icon>
